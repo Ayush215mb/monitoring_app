@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { RemoteServersModule } from './remote-servers/remote-servers.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       synchronize: true, //only for development
     }),
     UsersModule,
+    RemoteServersModule,
   ],
   controllers: [AppController],
   providers: [],
